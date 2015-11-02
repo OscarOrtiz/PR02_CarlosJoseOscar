@@ -1,0 +1,7 @@
+Gmail:
+user: proyecto02.joan23@gmail.com
+pass: Pro02_joan23
+
+Hostinger:
+user: proyecto02.joan23@gmail.com
+pass: Pro02_joan23
