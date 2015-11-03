@@ -34,8 +34,9 @@
 #cssmenu #bg-three,
 #cssmenu #bg-four {
   position: absolute;
+  margin-left: 12.5%;
   bottom: 0;
-  width: 100%;
+  width: 75%;
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
 }
@@ -70,6 +71,7 @@
   height: 59px;
 }
 #cssmenu ul li {
+  margin-left: 12.5%;
   float: left;
   margin-right: 4px;
   border-top-left-radius: 3px;
