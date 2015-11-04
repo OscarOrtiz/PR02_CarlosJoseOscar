@@ -100,6 +100,7 @@ p {
 }
 
 #centro{
-	margin-left: 30%;
+	position: relative;
+	margin-left: 27%;
 	margin-top: 2%;
 }
