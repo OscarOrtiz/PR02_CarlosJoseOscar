@@ -1,0 +1,11 @@
+<?php
+	echo $_SESSION['usuario'];  
+	if(empty($_SESSION['usuario'])) {
+?>
+<p>No estas logeado</p>
+<?php
+	} else {
+		echo "<center><h2>Bienvenido " . $_SESSION['usuario'] . "</h2></center><br>";		
+		echo "<center><a href='logout.php'>Logout</a></center>";
+	}
+?>

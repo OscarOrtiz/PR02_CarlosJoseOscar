@@ -29,7 +29,11 @@ if (empty($envio)){
 	$datos=mysqli_query($con,$sql);
 
 	while($recursos=mysqli_fetch_array($datos)){
-		//echo "Recurso: ".utf8_encode($recursos['img'])."<br/>";
+		if(!empty($recursos['img']){
+			//echo "Recurso: ".$recursos['img']."<br/>";
+		}else{
+
+		}
 		echo "Recurso: ".utf8_encode($recursos['nomR'])."<br/>";
 		echo "Recurso: ".utf8_encode($recursos['nomUser'])."<br/>";
 		echo "Recurso: ".utf8_encode($recursos['nomEstado'])."<br/>";
