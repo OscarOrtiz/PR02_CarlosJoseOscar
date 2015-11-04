@@ -1,6 +1,6 @@
 body {
 	margin:0px;
-    background:#136798;
+    background:#98CBCB;
 }
 .usuario{
 
@@ -13,8 +13,13 @@ body {
 
 .header{
 	height:160px;
-    background:#FFFFFF;
-    border:1px solid #CCC;
+    background:#98CBCB;
+    border:0px solid #CCC;
     width:75%;
     margin:0px auto;
+}
+.contenido{
+    width:75%;
+    margin:0px auto;
+    margin-top: 1%;
 }
