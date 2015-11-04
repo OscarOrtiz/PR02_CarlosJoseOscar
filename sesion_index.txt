@@ -1,11 +1,13 @@
 <?php
-	echo $_SESSION['usuario'];  
-	if(empty($_SESSION['usuario'])) {
-?>
-<p>No estas logeado</p>
-<?php
-	} else {
+	if(!empty($_SESSION['usuario'])) {	// Sesion de un usuario			
 		echo "<center><h2>Bienvenido " . $_SESSION['usuario'] . "</h2></center><br>";		
 		echo "<center><a href='logout.php'>Logout</a></center>";
+	if(!empty($_SESSION['admin'])){		//sesion de un administrador
+		echo "<center><h2>Administrador " . $_SESSION['admin'] . "</h2></center><br>";		
+		echo "<center><a href='logout.php'>Logout</a></center>";
+	} else {
+		?>
+		<p>No estas logeado</p>
+		<?php
 	}
 ?>
