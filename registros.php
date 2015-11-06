@@ -1,21 +1,11 @@
 <link rel="stylesheet" href="css/tablareservas.css">
 <?php
-if (TRUE){
-	$host = "localhost";
-	$usuari = "root";
-	$clau = "";
-	$bd = "bd_intranet";
-} else {
-	$host = "mysql.hostinger.es";
-	$usuari = "u394198823_zoopl";
-	$clau = "adminamin";
-	$bd = "";
-}
+
 
 //Iniciamos la sesión
 
 		
-$con = mysqli_connect('localhost','root','','bd_intranet');
+$con = mysqli_connect('mysql.hostinger.es','u888001602_admin','1234567890','u888001602_intra');
 $sql = "SELECT users.*,resources.*,resourcestype.*,registers.*,estadoinfo.* FROM ((((resourcestype INNER JOIN resources ON resourcestype.idRType=resources.idRType) INNER JOIN registers ON resources.idResource=registers.idResource) INNER JOIN users ON users.idUser=registers.idUser) INNER JOIN estadoinfo ON resources.idEstado=estadoinfo.idEstado)";
 
 if(!empty($_SESSION['usuario'])){		//Aqui introducimos lo que puede ver un usuario con una cuentra normal
