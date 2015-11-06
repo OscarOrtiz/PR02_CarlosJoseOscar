@@ -1,0 +1,25 @@
+body {
+	margin:0px;
+    background:#98CBCB;
+}
+.usuario{
+
+}
+.header-cont {
+    width:100%;
+    position:fixed;
+    top:0px;
+   }
+
+.header{
+	height:160px;
+    background:#98CBCB;
+    border:0px solid #CCC;
+    width:75%;
+    margin:0px auto;
+}
+.contenido{
+    width:75%;
+    margin:0px auto;
+    margin-top: 1%;
+}
