@@ -46,7 +46,7 @@ if(!empty($_SESSION['usuario'])){		//Aqui introducimos lo que puede ver un usuar
 			</ul>
 			</div>
 		<div class="contenido">
-			<?php include("formularis_definitiu.php"); ?>
+			<?php include("pagina_reserva.php"); ?>
 			<br/>
 		</div>
 		<div class="footer"></div>

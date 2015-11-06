@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="css/tablareservas.css">
 <?php
 if (TRUE){
 	$host = "localhost";
@@ -12,7 +13,7 @@ if (TRUE){
 }
 
 //Iniciamos la sesión
-session_start();
+
 		
 $con = mysqli_connect('localhost','root','','bd_intranet');
 $sql = "SELECT users.*,resources.*,resourcestype.*,registers.*,estadoinfo.* FROM ((((resourcestype INNER JOIN resources ON resourcestype.idRType=resources.idRType) INNER JOIN registers ON resources.idResource=registers.idResource) INNER JOIN users ON users.idUser=registers.idUser) INNER JOIN estadoinfo ON resources.idEstado=estadoinfo.idEstado)";
@@ -22,7 +23,10 @@ if(!empty($_SESSION['usuario'])){		//Aqui introducimos lo que puede ver un usuar
 }else if(!empty($_SESSION['admin'])){ 	//Aqui introducimos lo que vera el administrador
 	$privilegios=$_SESSION['admin'];	//Guardamos la variable admin en $privilegios para que no haya diferencias entre usuario y administrador en el resto del codigo
 	?>
-	<table border>
+	<br/>
+	<h3>RESERVAS GLOBALES</h3>
+	<br/>
+	<table class="mytable">
 	<tr>
 		<th>Usuario</th>
 		<th>Recurso</th>
@@ -51,7 +55,10 @@ if(!empty($_SESSION['usuario'])){		//Aqui introducimos lo que puede ver un usuar
 	
 ?>
 <!-- Esto podran verlo usuarios y administradores -->
-<table border>
+<br/>
+<h3>MIS RESERVAS</h3>
+<br/>
+<table class="mytable">
 	<tr>
 		<th>Recurso</th>
 		<th>Fecha inicio</th>
@@ -72,5 +79,4 @@ if(!empty($_SESSION['usuario'])){		//Aqui introducimos lo que puede ver un usuar
 		   			echo "</tr>";
 				}
 		echo "</table>";
-	echo "<center><a href='logout.php'>Logout</a></center>";
 	?>

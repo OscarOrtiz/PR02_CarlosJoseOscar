@@ -18,22 +18,25 @@
 	</head>
 	
 	<body>
-	<nav id="menu_gral">
-  		<ul>
-    	<li><a href="#"><?php
-    		echo  $_SESSION['usuario'];
-		?></a>
-        <ul><!-- Segundo nivel desplegable -->
-         <li><a href="logout.php">Logout</a></li>
-        </ul>
-    </li>
-</nav>
-
-		
-		</div>
+	<?php
+if(!empty($_SESSION['usuario'])){		//Aqui introducimos lo que puede ver un usuario con una cuentra normal
+	$privilegios=$_SESSION['usuario'];	//Guardamos la variable usuario en $privilegios para que no haya diferencias entre usuario y administrador en el resto del codigo
+}else if(!empty($_SESSION['admin'])){ 	//Aqui introducimos lo que vera el administrador
+	$privilegios=$_SESSION['admin'];	//Guardamos la variable admin en $privilegios para que no haya diferencias entre usuario y administrador en el resto del codigo
+}	
+?>
 		<div class="header">
+			<nav id="menu_gral">
+		  		<ul>
+			    	<li><a href="#"><?php
+			    		echo  $privilegios;
+						?></a>
+        		<ul><!-- Segundo nivel desplegable -->
+         			<li><a href="logout.php">Logout</a></li>
+        		</ul>
+    				</li>
+			</nav>
 			<img src="images/logo_2.png">
-
 		</div>
 		<div class="header-cont"></div>
 			<div id='cssmenu'>
@@ -43,7 +46,7 @@
 			</ul>
 			</div>  
 		<div class="contenido">
-			awdawdw
+			<center><?php include("registros.php"); ?></center>
 		</div>
 		<div class="footer"></div>
 	</body>

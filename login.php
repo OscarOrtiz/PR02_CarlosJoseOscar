@@ -30,19 +30,28 @@ if($row = mysqli_fetch_array($result))
 		 	 //Almacenamos el nombre de usuario en una variable de sesión usuario
 			  $_SESSION['usuario'] = $usuario;
 		  	//Redireccionamos a la pagina que verá el usuario
-		  	header("Location: registros.php");
+		  	
+		  	header("Location: paginausuario_reservar.php");
+
 		}else{
 			$_SESSION['admin'] = $usuario;
 			//Redireccionamos a la pagina que verá el usuario
-			header("Location: registros.php");
+			
+			header("Location: paginausuario_reservar.php");
 		}  
 	}else{
   	//En caso que la contraseña sea incorrecta enviamos un msj y redireccionamos a login.php
- 	echo "Password incorrecta";
+ 	echo '<script language="javascript">
+		alert("Contraseña incorrecta");
+		document.location=("index.html");
+		</script>';
 	}
 }else{
  //en caso que el nombre de administrador es incorrecto enviamos un msj y redireccionamos a login.php
-echo "usuario incorrecto";
+	echo '<script language="javascript">
+		alert("Usuario incorrecto");
+		document.location=("index.html");
+		</script>';     
         
 }
 
